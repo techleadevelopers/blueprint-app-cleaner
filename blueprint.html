@@ -140,15 +140,18 @@
                 gap: 16px;
             }
             
-            .kpis, .roadmap, .risk-grid, #risks .ex-row {
-                flex-direction: column;
-                gap: 12px;
+            /* Ajuste para os KPIs da parte superior ficarem horizontal no mobile */
+            .kpis {
+                display: flex;
+                flex-direction: row; /* Mantém horizontal */
+                flex-wrap: wrap; /* Quebra para próxima linha se não couber */
+                justify-content: space-around; /* Distribui o espaço entre eles */
+                gap: 8px; /* Espaço menor entre os itens */
             }
-            
+
             .kpi {
-                flex: none;
-                width: 100%;
-                min-width: auto;
+                flex: 1 1 30%; /* Permite que os itens se ajustem em até 3 colunas */
+                min-width: 100px; /* Garante um tamanho mínimo */
             }
             
             .roadmap, .risk-grid {
@@ -183,7 +186,7 @@
                 text-align: left;
             }
             
-            /* Ajuste para a seção de KPIs ficar horizontal no mobile */
+            /* Ajuste para a seção de KPIs de riscos ficar horizontal no mobile */
             #risks .kpi-wrap {
                 display: flex;
                 flex-direction: row;
