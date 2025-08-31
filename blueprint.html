@@ -140,7 +140,7 @@
                 gap: 16px;
             }
             
-            .kpis, .roadmap, .risk-grid, #risks .ex-row, #risks .kpi-wrap {
+            .kpis, .roadmap, .risk-grid, #risks .ex-row {
                 flex-direction: column;
                 gap: 12px;
             }
@@ -166,15 +166,35 @@
 
             /* AJUSTES ESPECÍFICOS PARA A SEÇÃO DA IMAGEM */
             #immediate-focus h2 {
-                font-size: 20px; /* Reduz o tamanho do título */
+                font-size: 20px;
             }
 
             #immediate-focus .lead {
-                font-size: 14px; /* Reduz o tamanho do parágrafo */
+                font-size: 14px;
             }
 
             #immediate-focus ol li, #immediate-focus ol li ul li {
-                margin-bottom: 10px; /* Adiciona espaçamento entre os itens da lista */
+                margin-bottom: 10px;
+            }
+            
+            /* Correção do alinhamento da seção "Fases de Escala" */
+            .phase {
+                align-items: center;
+                text-align: left;
+            }
+            
+            /* Ajuste para a seção de KPIs ficar horizontal no mobile */
+            #risks .kpi-wrap {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                gap: 8px; /* Espaço menor entre os itens */
+            }
+
+            #risks .kpi {
+                flex: 1 1 45%; /* Permite que os itens se ajustem em duas colunas */
+                min-width: 100px;
             }
         }
     </style>
